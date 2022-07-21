@@ -23,11 +23,15 @@ public class LambdaMethods {
 		//3. Call the printCustonMessage method using a lambda so that the String prints with a mix between upper an lower case characters.
 		printCustomMessage((s)->{
 			String newString="";
+			String printed="";
 			for(int i =0; i<s.length();i++) {
 				if(i%2==1) {
-					
+					newString.equals(s.charAt(i));
+					newString.toUpperCase();
 				}
+				printed+=newString;
 			}
+		System.out.println(newString+"hi");
 		}, "uppperorlowercase");
 		//4. Call the printCustonMessage method using a lambda so that the String prints with a period in between each character.
 		
