@@ -123,7 +123,7 @@ public class Minesweeper extends PApplet {
      * 6. Use reduce() or sum() to count the number of 1s, i.e. mines
      */
     void setNumberOfSurroundingMines() {
-        cells.stream().forEach((cell)->getNeighbors(cell).stream().map((cellu)->cellu.mine).red);
+        cells.stream().forEach((cell)->getNeighbors(cell).stream().map((cellu)->cellu.mine).reduce(null));
     }
     
     @Override
