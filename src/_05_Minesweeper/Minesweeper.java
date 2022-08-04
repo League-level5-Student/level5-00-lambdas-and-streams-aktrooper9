@@ -74,15 +74,17 @@ public class Minesweeper extends PApplet {
 	 * the stream match the condition
 	 */
 	boolean checkWin() {
-
-		cells.stream().filter((cell) -> cell.mine == false).noneMatch((cell) -> {
+		
+		boolean haswon=cells.stream().filter((cell) -> cell.mine == false).noneMatch((cell) -> {
 			if (cell.revealed == false) {
 				return true;
 			} else {
 				return false;
 			}
 		});
-		return false;
+		
+		return haswon;
+
 	}
 
 	/*
